@@ -8,6 +8,7 @@ selenium = "*"
 webdriver-manager = "*"
 selenium-requests = "*"
 beautifulsoup4 = "*"
+django = "~=2.0.0"
 
 [dev-packages]
 
