@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ujz(li!x-q#vyw01=kw-#q=s&u!-g%@+s5s@jrna)ww##1ec)4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.lottomanager.com']
 
 
 # Application definition
