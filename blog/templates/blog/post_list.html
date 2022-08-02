@@ -10,5 +10,23 @@
   <h1>BLOG Page</h1>
 
   <p>{{ title }}</p>
+
+  <ol>
+    {% for post in posts %}
+      <li>
+        <div>
+          {{ post.title }}
+        </div>
+        <div>
+          {{ post.author.username }}
+        </div>
+        <div>
+          {{ post.text }}
+        </div>
+        <hr />
+      </li>
+    {% endfor %}
+  </ol>
+  <a href="{% url 'blog:create_post' %}">등록하기</a>
 </body>
 </html>
