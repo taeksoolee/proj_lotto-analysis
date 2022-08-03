@@ -24,3 +24,11 @@ pipenv shell
 curl -O https://chromedriver.storage.googleapis.com/104.0.5112.29/chromedriver_mac64_m1.zip
 unzip chromedriver_mac64_m1.zip
 ```
+
+## 📝 Django
+
+```
+# 실행
+python manage.py runserver
+python manage.py runserver 0.0.0.0:8000 # for 크롬북
+```
