@@ -1,7 +1,8 @@
 <script type="ts">
+  import { createEventDispatcher } from "svelte";
+
   import { delTodo, patchTodoDone } from "@/api";
   import type Todo from "@/interfaces/Todo";
-  import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
 

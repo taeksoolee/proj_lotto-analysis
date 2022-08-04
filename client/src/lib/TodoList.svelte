@@ -3,30 +3,12 @@
 
   import type Todo from "@/interfaces/Todo";
   import TodoItem from "@/lib/TodoItem.svelte";
+  import TodoAddForm from "@/lib/TodoAddForm.svelte";
 
-  let newTitle: string = "";
   let todosPromise: Promise<Todo[]> = getTodo();
-
-  let isUpdating = false;
 
   const refetch = () => {
     todosPromise = getTodo();
-  };
-
-  const addTodo = async () => {
-    isUpdating = true;
-
-    const ok = await postTodo({
-      title: newTitle,
-      done: false,
-    });
-
-    if (ok) {
-      newTitle = "";
-    }
-
-    refetch();
-    isUpdating = false;
   };
 </script>
 
@@ -48,16 +30,7 @@
   {/await}
 </section>
 
-{#if isUpdating}
-  <div>...updating</div>
-{:else}
-  <section>
-    <form on:submit|preventDefault={addTodo}>
-      <input bind:value={newTitle} />
-      <button type="submit">ADD</button>
-    </form>
-  </section>
-{/if}
+<TodoAddForm on:save={refetch} />
 
 <style>
 </style>
