@@ -32,3 +32,13 @@ unzip chromedriver_mac64_m1.zip
 python manage.py runserver
 python manage.py runserver 0.0.0.0:8000 # for 크롬북
 ```
+
+## 📝 Client (Svelte / typescript)
+
+- path : `/client`
+- config : vite
+
+```shell
+# 개발서버 실행
+npm run dev
+```
